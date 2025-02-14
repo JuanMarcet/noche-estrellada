@@ -1,0 +1,103 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Evita el scroll */
+}
+
+.contenedor_titulo {
+    position: absolute; /* Posiciona el contenedor en la parte superior */
+    top: 20px; /* Distancia desde la parte superior */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta el centrado */
+    text-align: center; /* Centra el texto */
+    z-index: 3; /* Asegura que esté por encima de todo */
+}
+
+.contenedor_titulo h1 {
+    color: white; /* Color del texto */
+    font-size: 24px; /* Tamaño del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+}
+
+.contenedor_imagen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Asegura que esté debajo del título */
+}
+
+.img-noche-estrellada {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el espacio */
+}
+
+.capa-opacidad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Inicialmente transparente */
+    transition: background-color 0.5s ease; /* Transición suave para el color de fondo */
+}
+
+.contenedor_img_ca {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    position: fixed;
+    z-index: 2; /* Asegura que esté por encima de la capa de opacidad */
+}
+
+.imagen-container {
+    position: relative;
+    width: 25%;
+    height: 50%;
+}
+
+.img_ca {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease; /* Transición suave para todos los efectos */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre la imagen */
+}
+
+.img-original {
+    opacity: 1; /* La imagen original es visible por defecto */
+    z-index: 1; /* Asegura que esté encima de la segunda imagen */
+}
+
+.img-nueva {
+    opacity: 0; /* La nueva imagen está oculta por defecto */
+    z-index: 0; /* Asegura que esté debajo de la primera imagen */
+}
+
+/* Efectos al hacer hover en la primera imagen */
+.imagen-container:hover .img-original {
+    transform: scale(1.2); /* Agranda la imagen */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1); /* Agrega sombra */
+}
+
+.imagen-container:hover .img-nueva {
+    transform: scale(1.2); /* Agranda la segunda imagen */
+    opacity: 1; /* Muestra la segunda imagen */
+}
+
+/* Clase para aplicar opacidad negra */
+.opacidad {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+}
