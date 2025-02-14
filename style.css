@@ -101,3 +101,15 @@ html, body {
 .opacidad {
     background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
 }
+
+.COPY {
+    position: fixed; /* Fija el elemento en la pantalla */
+    bottom: 10px; /* Lo posiciona desde la parte inferior */
+    right: 10px; /* Lo posiciona desde la derecha */
+    color: white; /* Color del texto */
+    font-size: 14px; /* Tamaño del texto */
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente para mejor visibilidad */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1000; /* Prioridad para estar encima de todo */
+}
